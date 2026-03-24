@@ -1060,14 +1060,40 @@
     <h2>Contact</h2>
     <div class="section-divider"></div>
     <p>
-      Contact us with any questions at <a href="mailto:ainurse@nailcollab.org" class="contact-link">ainurse&#64;nailcollab.org</a>
+      Contact us with any questions at <span id="contact-email"></span>
     </p>
     <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);">
       <p style="font-size:0.85rem;">
-        AINurse-26 is co-located with the <a href="https://aime26.aimedicine.info/" class="contact-link">International Conference on Artificial Intelligence in Medicine (AIME 2026)</a> in Ottawa, Canada.
+        AINurse-26 is co-located with the <a href="https://aime26.aimedicine.info/" class="contact-link" target="_blank">International Conference on Artificial Intelligence in Medicine (AIME 2026)</a> in Ottawa, Canada.
       </p>
       <div style="display:flex;gap:1rem;margin-top:1rem;flex-wrap:wrap;">
-        <a href="https://sites.google.com/view/ainurse22/" class="contact-link" style="font-size:0.85rem;">AINurse-22</a>
-        <a href="https://sites.google.com/view/ainurse23/" class="contact-link" style="font-size:0.85rem;">AINurse-23</a>
-        <a href="https://sites.google.com/view/ainurse24/" class="contact-link" style="font-size:0.85rem;">AINurse-24</a>
-        <a href="https://sites.google.com/view/ainurse25/" class="contact-link" style="font-size:0.85rem;">A
+        <a href="https://sites.google.com/view/ainurse22/" class="contact-link" style="font-size:0.85rem;" target="_blank">AINurse-22</a>
+        <a href="https://sites.google.com/view/ainurse23/" class="contact-link" style="font-size:0.85rem;" target="_blank">AINurse-23</a>
+        <a href="https://sites.google.com/view/ainurse24/" class="contact-link" style="font-size:0.85rem;" target="_blank">AINurse-24</a>
+        <a href="https://sites.google.com/view/ainurse25/" class="contact-link" style="font-size:0.85rem;" target="_blank">AINurse-25</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 AINurse-26 &amp; the NAIL Collaborative &nbsp;|&nbsp; Fifth International Workshop on Artificial Intelligence in Nursing &nbsp;|&nbsp; Co-located with <a href="https://aime26.aimedicine.info/" target="_blank">AIME 2026</a></p>
+</footer>
+
+<script>
+  // Assemble email at runtime to prevent scraper obfuscation
+  var u = 'ainurse';
+  var d = 'nailcollab.org';
+  var el = document.getElementById('contact-email');
+  if (el) {
+    var a = document.createElement('a');
+    a.href = 'mailto:' + u + '@' + d;
+    a.textContent = u + '@' + d;
+    a.className = 'contact-link';
+    el.appendChild(a);
+  }
+</script>
+
+</body>
+</html>
