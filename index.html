@@ -578,6 +578,55 @@
   }
 
 
+  /* SUBMISSION CONTENT */
+  .sub-content-block {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 2rem 2.25rem;
+    margin-top: 2rem;
+  }
+  .sub-section-heading {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1.75rem 0 0.75rem;
+  }
+  .sub-section-heading:first-child { margin-top: 0; }
+  .sub-text {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+  }
+  .sub-list {
+    list-style: none;
+    margin: 0.5rem 0 1rem 0;
+    padding: 0;
+  }
+  .sub-list li {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.65);
+    padding: 0.4rem 0 0.4rem 1.25rem;
+    position: relative;
+    line-height: 1.65;
+  }
+  .sub-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.78em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--mint);
+  }
+  .sub-link {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  .sub-link:hover { color: var(--white); }
+
   /* COMING SOON */
   #schedule { background: var(--off-white); }
   #keynotes { background: var(--white); }
@@ -907,15 +956,13 @@
 <section id="submission">
   <div class="container">
     <div class="section-label" style="color: var(--mint);">Paper Submission</div>
-    <h2>Submit Your Work</h2>
+    <h2>Call for Submissions</h2>
     <div class="section-divider"></div>
-    <p class="lead">
-      AINurse-26 solicits original research papers on AI in nursing and healthcare. All submissions will be peer-reviewed by at least two Program Committee members. Key dates and criteria are below.
-    </p>
 
-    <div style="margin-bottom:2rem;">
+    <div style="margin-bottom:2.5rem;">
       <a href="https://easychair.org/conferences/?conf=ainurse26" target="_blank" class="btn-primary" style="display:inline-block;">Submit a Paper via EasyChair</a>
     </div>
+
     <div class="submission-cards">
       <div class="sub-card">
         <div class="sub-label">Paper Submission Deadline</div>
@@ -934,23 +981,38 @@
       </div>
     </div>
 
-    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:2rem;">
-      <h3 style="color:var(--white);font-size:1rem;margin-bottom:0.5rem;font-weight:600;">Review Criteria</h3>
-      <p style="font-size:0.88rem;color:rgba(255,255,255,0.55);margin-bottom:0rem;">All papers evaluated on:</p>
-      <ul class="criteria-list">
-        <li>Relevance to the workshop theme</li>
-        <li>Originality and novelty</li>
-        <li>Methodological quality</li>
-        <li>Clarity of presentation</li>
-        <li>Potential for clinical or research impact</li>
-        <li>Interdisciplinary integration of AI and nursing</li>
+    <div class="sub-content-block">
+
+      <h3 class="sub-section-heading">Topics of Interest</h3>
+      <ul class="sub-list">
+        <li><strong>Implementation and deployment of AI in nursing practice:</strong> Workflow integration, sociotechnical considerations, and real-world evaluation</li>
+        <li><strong>Trustworthy and ethical AI in nursing:</strong> Fairness, accountability, transparency, privacy protection, consent, and governance</li>
+        <li><strong>Explainable and human-centered AI:</strong> Interpretability, usability, and clinician trust in AI-supported decision-making</li>
+        <li><strong>Clinical decision support for nursing:</strong> Design, evaluation, and implementation of nurse-centered CDS systems</li>
+        <li><strong>Natural language processing and generative AI:</strong> Responsible use of large language models and text analytics in nursing contexts</li>
+        <li><strong>Implementation science and human factors:</strong> UI/UX design, human-AI interaction, and organizational readiness</li>
+        <li><strong>AI for nursing education and workforce development:</strong> AI-enabled training, competency development, and clinical upskilling</li>
+        <li><strong>Algorithm biases:</strong> Detection and elimination of algorithmic biases to improve health equity, including racial and other biases</li>
+        <li><strong>AI ethics and governance:</strong> Ethical frameworks, privacy considerations, and governance models for responsible AI implementation in nursing practice</li>
       </ul>
-      <p style="font-size:0.82rem;color:rgba(255,255,255,0.45);margin-top:1.5rem;">
-        Priority will be given to work that bridges AI research and clinical implementation. Conflicts of interest are managed by excluding committee members from reviewing submissions involving collaborators or institutional colleagues.
-      </p>
+
+      <h3 class="sub-section-heading">Submissions</h3>
+      <p class="sub-text">Papers should be submitted to the workshop <a href="https://easychair.org/conferences/?conf=ainurse26" class="sub-link" target="_blank">EasyChair page</a>. The workshop features regular papers in three categories:</p>
+      <p class="sub-text"><strong>Extended Abstract (up to 3 pages) or Demonstration paper (1 page)</strong> describing either:</p>
+      <ul class="sub-list">
+        <li>a research project,</li>
+        <li>a demonstration of implemented systems, or</li>
+        <li>late-breaking results (work-in-progress).</li>
+      </ul>
+      <p class="sub-text">We are also accepting the following two proposal types:</p>
+      <ul class="sub-list">
+        <li><strong>Panel proposal (up to 2 pages)</strong> describing the proposed topic and including the invited moderator and panelists</li>
+        <li><strong>Debate on topics related to AI and nursing (up to 2 pages)</strong> describing the proposed topic and including the invited moderator and panelists</li>
+      </ul>
+      <p class="sub-text">Submissions should be formatted according to <a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" class="sub-link" target="_blank">Springer's LNCS format</a> (Word template is also <a href="https://resource-cms.springernature.com/springer-cms/rest/v1/content/19238706/data/v3" class="sub-link" target="_blank">available here</a>). Authors can include an appendix that does not count towards the page limit, however there is no guarantee that reviewers will read it. Springer's proceedings LaTeX templates are also available in <a href="https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kzwwpvhwnvfj" class="sub-link" target="_blank">Overleaf</a>. Springer encourages authors to include their <a href="https://goo.gl/hbsa4D" class="sub-link" target="_blank">ORCIDs</a> in their papers. Selected accepted abstracts will be invited to submit their full paper to a special journal issue (to be announced).</p>
+
     </div>
 
-    <div style="margin-top:2rem;">
   </div>
 </section>
 
@@ -1063,7 +1125,7 @@
     <h2>Contact</h2>
     <div class="section-divider"></div>
     <p>
-      Contact us with any questions at <span id="contact-email"></span>
+      Send questions to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#105;&#110;&#117;&#114;&#115;&#101;&#64;&#110;&#97;&#105;&#108;&#99;&#111;&#108;&#108;&#97;&#98;&#46;&#111;&#114;&#103;" class="contact-link">&#97;&#105;&#110;&#117;&#114;&#115;&#101;&#64;&#110;&#97;&#105;&#108;&#99;&#111;&#108;&#108;&#97;&#98;&#46;&#111;&#114;&#103;</a>
     </p>
     <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);">
       <p style="font-size:0.85rem;">
@@ -1084,11 +1146,6 @@
   <p>&copy; 2026 AINurse-26 &amp; the NAIL Collaborative &nbsp;|&nbsp; Fifth International Workshop on Artificial Intelligence in Nursing &nbsp;|&nbsp; Co-located with <a href="https://aime26.aimedicine.info/" target="_blank">AIME 2026</a></p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Assemble email at runtime to prevent scraper obfuscation
-  var u = 'ainurse';
-  var d = 'nailcollab.org';
-  var el = document.getElementById('contact-email');
-  if (el) {
-    var a = document.createElement('a');
-    a.
+
+</body>
+</html>
