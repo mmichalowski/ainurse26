@@ -627,6 +627,65 @@
   }
   .sub-link:hover { color: var(--white); }
 
+  /* SCHEDULE TABLE */
+  #schedule { background: var(--off-white); }
+  .sched-table { border: 1px solid var(--gray-100); border-radius: 10px; overflow: hidden; }
+  .sched-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    border-bottom: 1px solid var(--gray-100);
+  }
+  .sched-row:last-child { border-bottom: none; }
+  .sched-time {
+    padding: 0.75rem 1rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--teal);
+    background: var(--white);
+    border-right: 1px solid var(--gray-100);
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0.9rem;
+    white-space: nowrap;
+  }
+  .sched-content {
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    background: var(--white);
+  }
+  .sched-session-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: var(--mint);
+  }
+  .sched-title {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.4;
+  }
+  .sched-auth {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  /* Row variants */
+  .sched-break .sched-time,
+  .sched-break .sched-content { background: var(--gray-100); }
+  .sched-break .sched-title { color: var(--gray-700); font-weight: 400; }
+  .sched-keynote .sched-time,
+  .sched-keynote .sched-content { background: var(--teal-pale); }
+  .sched-session-hdr .sched-time,
+  .sched-session-hdr .sched-content { background: #F0F7FF; }
+  .sched-paper .sched-time { color: var(--gray-500); font-weight: 400; font-size: 0.78rem; }
+  .sched-special .sched-time,
+  .sched-special .sched-content { background: var(--mint-light); }
+  .sched-special .sched-title { color: var(--navy); }
+
   /* COMING SOON */
   #schedule { background: var(--off-white); }
   #keynotes { background: var(--white); }
@@ -924,14 +983,103 @@
     <div class="section-label">Program</div>
     <h2>Workshop Schedule</h2>
     <div class="section-divider"></div>
-    <p class="lead">The detailed workshop schedule will be posted here once finalized.</p>
-    <div class="coming-soon-block">
-      <div class="cs-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+    <p class="lead">Thursday, July 10, 2026 &nbsp;·&nbsp; Ottawa, Canada &nbsp;·&nbsp; All times local (EDT)</p>
+
+    <div class="sched-table">
+
+      <!-- Opening -->
+      <div class="sched-row sched-special">
+        <div class="sched-time">9:00 – 9:15</div>
+        <div class="sched-content"><span class="sched-title">Opening Remarks</span><span class="sched-auth">Martin Michalowski &amp; Lisiane Pruinelli</span></div>
       </div>
-      <h3>Schedule Coming Soon</h3>
-      <p>The full program including session times, paper presentations, keynote slot, and panel discussion will be published here closer to the workshop date.</p>
-    </div>
+
+      <!-- Keynote 1 -->
+      <div class="sched-row sched-keynote">
+        <div class="sched-time">9:15 – 10:00</div>
+        <div class="sched-content"><span class="sched-session-label">Keynote Address</span><span class="sched-title">Invited Speaker 1 <span class="tbd">TBD</span></span></div>
+      </div>
+
+      <!-- Break -->
+      <div class="sched-row sched-break">
+        <div class="sched-time">10:00 – 10:30</div>
+        <div class="sched-content"><span class="sched-title">Coffee Break</span></div>
+      </div>
+
+      <!-- Session 1 header -->
+      <div class="sched-row sched-session-hdr">
+        <div class="sched-time">10:30 – 11:30</div>
+        <div class="sched-content"><span class="sched-session-label">Session 1: Clinical Decision Support &amp; NLP</span><span class="sched-auth">20 minutes per presentation including Q&amp;A &nbsp;·&nbsp; Session Chair: TBD</span></div>
+      </div>
+      <div class="sched-row sched-paper">
+        <div class="sched-time">10:30</div>
+        <div class="sched-content"><span class="sched-title">DischargeIQ: A Four-Pillar AI Framework for Preventing Chronic Disease Readmissions</span><span class="sched-auth">Sharonda Davis</span></div>
+      </div>
+      <div class="sched-row sched-paper">
+        <div class="sched-time">10:50</div>
+        <div class="sched-content"><span class="sched-title">Toward an Equity-Centered Codebook for Stigmatizing Language in Liver Transplant Psychosocial Evaluations</span><span class="sched-auth">Lisiane Pruinelli, Saaketh R. Kesireddy, Mihir Momaya, Thiago Beduschi, Maxim Topaz</span></div>
+      </div>
+      <div class="sched-row sched-paper">
+        <div class="sched-time">11:10</div>
+        <div class="sched-content"><span class="sched-title">A Clinician-Centered Evaluation Framework for LLMs in Patient Education: Integrating TAM and the Medical Condition Regard Scale (TAM-MCRS)</span><span class="sched-auth">Davis Austria, Grace Williams, Christopher Girardo, Michael Arowolo, Jason Hill, Charlene Pope, Robert Neal Axon, Meenakshi Mishra</span></div>
+      </div>
+
+      <!-- Lunch -->
+      <div class="sched-row sched-break">
+        <div class="sched-time">11:30 – 1:00</div>
+        <div class="sched-content"><span class="sched-title">Lunch Break</span><span class="sched-auth">On your own</span></div>
+      </div>
+
+      <!-- Emerging Scholar -->
+      <div class="sched-row sched-keynote">
+        <div class="sched-time">1:00 – 1:45</div>
+        <div class="sched-content"><span class="sched-session-label">Invited Emerging Scholar Presentation</span><span class="sched-title">Speaker &amp; Title <span class="tbd">TBD</span></span></div>
+      </div>
+
+      <!-- Session 2 header -->
+      <div class="sched-row sched-session-hdr">
+        <div class="sched-time">1:45 – 3:05</div>
+        <div class="sched-content"><span class="sched-session-label">Session 2: AI in Practice: Deployment, Equity, and Workforce</span><span class="sched-auth">20 minutes per presentation including Q&amp;A &nbsp;·&nbsp; Session Chair: TBD</span></div>
+      </div>
+      <div class="sched-row sched-paper">
+        <div class="sched-time">1:45</div>
+        <div class="sched-content"><span class="sched-title">Evaluating Innovation in Clinical Practice: Implementation Insights from an AI Scribe in First Nations Home Care</span><span class="sched-auth">LaShawn Murray, Dean Eurich, Salim Samanani, Beth Woytas, J. Ross Mitchell, Jake Hayward, Enid Montague</span></div>
+      </div>
+      <div class="sched-row sched-paper">
+        <div class="sched-time">2:05</div>
+        <div class="sched-content"><span class="sched-title">Empowering Patients: Assessing and Advancing AskEllyn.ai in Breast Cancer Support</span><span class="sched-auth">Amina Silva &amp; Ellyn Winters-Robinson</span></div>
+      </div>
+      <div class="sched-row sched-paper">
+        <div class="sched-time">2:25</div>
+        <div class="sched-content"><span class="sched-title">Designing Compassion-Informed AI Decision-Support Pathways to Enhance Resilience Among Organ Donation Coordinator Nurses</span><span class="sched-auth">Vanessa Silva e Silva &amp; Amina Silva</span></div>
+      </div>
+      <div class="sched-row sched-paper">
+        <div class="sched-time">2:45</div>
+        <div class="sched-content"><span class="sched-title">Preparing Future Nurse Scientists: Bridging Traditional Statistics and AI Literacy in PhD Nursing Education</span><span class="sched-auth">Stefanie L. Boyles, Julienne N. Rutherford, Erin Galyen</span></div>
+      </div>
+
+      <!-- Break -->
+      <div class="sched-row sched-break">
+        <div class="sched-time">3:05 – 3:20</div>
+        <div class="sched-content"><span class="sched-title">Coffee Break</span></div>
+      </div>
+
+      <!-- Panel -->
+      <div class="sched-row sched-keynote">
+        <div class="sched-time">3:20 – 4:10</div>
+        <div class="sched-content">
+          <span class="sched-session-label">Panel Discussion</span>
+          <span class="sched-title">Prioritizing Nurse–Patient Relationships in the Digital Transformation of Nursing: From Discussion Paper to Practice</span>
+          <span class="sched-auth">Moderated by Michal Lipschuetz (Hadassah–Hebrew University) &amp; Maxim Topaz (Columbia University)</span>
+        </div>
+      </div>
+
+      <!-- Closing -->
+      <div class="sched-row sched-special">
+        <div class="sched-time">4:10 – 4:30</div>
+        <div class="sched-content"><span class="sched-title">Closing Remarks &amp; Discussion</span><span class="sched-auth">Martin Michalowski &amp; Lisiane Pruinelli</span></div>
+      </div>
+
+    </div><!-- end sched-table -->
   </div>
 </section>
 
