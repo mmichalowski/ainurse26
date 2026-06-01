@@ -627,6 +627,72 @@
   }
   .sub-link:hover { color: var(--white); }
 
+  /* INVITED SPEAKERS */
+  .speakers-grid { display: flex; flex-direction: column; gap: 2rem; }
+  .speaker-card {
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+  .speaker-card-tbd { opacity: 0.55; }
+  .speaker-header {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  .speaker-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--teal-pale);
+    color: var(--teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .speaker-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.15rem;
+  }
+  .speaker-creds { font-size: 0.78rem; color: var(--teal); font-weight: 500; margin-bottom: 0.2rem; }
+  .speaker-affil { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.3rem; }
+  .speaker-slot {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--mint);
+    font-weight: 600;
+  }
+  .speaker-talk { margin-bottom: 1.25rem; }
+  .speaker-talk-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-500);
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+  }
+  .speaker-talk-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.4;
+  }
+  .speaker-abstract, .speaker-bio { margin-top: 1.25rem; }
+  .speaker-abstract p, .speaker-bio p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-top: 0.35rem;
+  }
+
   /* SCHEDULE TABLE */
   #schedule { background: var(--off-white); }
   .sched-table { border: 1px solid var(--gray-100); border-radius: 10px; overflow: hidden; }
@@ -741,7 +807,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#topics">Topics</a></li>
     <li><a href="#format">Format</a></li>
-    <li><a href="#schedule">Schedule</a></li><li><a href="#keynotes">Keynotes</a></li><li><a href="#submission">Submit</a></li>
+    <li><a href="#schedule">Schedule</a></li><li><a href="#keynotes">Invited Speakers</a></li><li><a href="#submission">Submit</a></li>
     <li><a href="#chairs">Organizers</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -954,8 +1020,8 @@
       <div class="format-item">
         <div class="format-number">02</div>
         <div>
-          <h3>Invited Keynote / Panel</h3>
-          <p>An invited keynote speaker or expert panel addressing trustworthy AI implementation in real-world clinical settings.</p>
+          <h3>Invited Speaker / Panel</h3>
+          <p>An invited speaker or expert panel addressing trustworthy AI implementation in real-world clinical settings.</p>
         </div>
       </div>
       <div class="format-item">
@@ -993,10 +1059,10 @@
         <div class="sched-content"><span class="sched-title">Opening Remarks</span><span class="sched-auth">Martin Michalowski &amp; Lisiane Pruinelli</span></div>
       </div>
 
-      <!-- Keynote 1 -->
+      <!-- Invited Speaker 1 -->
       <div class="sched-row sched-keynote">
         <div class="sched-time">9:15 – 10:00</div>
-        <div class="sched-content"><span class="sched-session-label">Keynote Address</span><span class="sched-title">Invited Speaker 1 <span class="tbd">TBD</span></span></div>
+        <div class="sched-content"><span class="sched-session-label">Invited Address</span><span class="sched-title">Invited Speaker 1 <span class="tbd">TBD</span></span></div>
       </div>
 
       <!-- Break -->
@@ -1032,7 +1098,11 @@
       <!-- Emerging Scholar -->
       <div class="sched-row sched-keynote">
         <div class="sched-time">1:00 – 1:45</div>
-        <div class="sched-content"><span class="sched-session-label">Invited Emerging Scholar Presentation</span><span class="sched-title">Speaker &amp; Title <span class="tbd">TBD</span></span></div>
+        <div class="sched-content">
+          <span class="sched-session-label">Invited Emerging Scholar Presentation</span>
+          <span class="sched-title">AI for Nurses, by Nurses: Centering the Direct Care Nurse Voice in AI Research, Evaluation, and Literacy</span>
+          <span class="sched-auth">Ann Wieben, PhD, RN &nbsp;·&nbsp; University of Wisconsin–Madison School of Nursing</span>
+        </div>
       </div>
 
       <!-- Session 2 header -->
@@ -1087,15 +1157,53 @@
 <section id="keynotes">
   <div class="container">
     <div class="section-label">Featured Speakers</div>
-    <h2>Keynote Speakers</h2>
+    <h2>Invited Speakers</h2>
     <div class="section-divider"></div>
-    <p class="lead">AINurse-26 will feature invited keynote speakers at the forefront of trustworthy AI implementation in healthcare and nursing. Speaker announcements are forthcoming.</p>
-    <div class="coming-soon-block">
-      <div class="cs-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+    <p class="lead">AINurse-26 features invited speakers at the forefront of trustworthy AI implementation in healthcare and nursing. Additional speaker announcements are forthcoming.</p>
+
+    <div class="speakers-grid">
+
+      <!-- Wieben -->
+      <div class="speaker-card">
+        <div class="speaker-header">
+          <div class="speaker-avatar">AW</div>
+          <div>
+            <h3 class="speaker-name">Ann Wieben</h3>
+            <div class="speaker-creds">PhD, RN, FAMIA</div>
+            <div class="speaker-affil">Assistant Professor · University of Wisconsin–Madison School of Nursing</div>
+            <div class="speaker-slot">Invited Emerging Scholar Presentation &nbsp;·&nbsp; 1:00 – 1:45 pm</div>
+          </div>
+        </div>
+        <div class="speaker-talk">
+          <div class="speaker-talk-label">Presentation Title</div>
+          <div class="speaker-talk-title">AI for Nurses, by Nurses: Centering the Direct Care Nurse Voice in AI Research, Evaluation, and Literacy</div>
+        </div>
+        <div class="speaker-abstract">
+          <div class="speaker-talk-label">Abstract</div>
+          <p>As AI rapidly transforms nursing, direct care nurses are too often left out of the research, design, and evaluation of AI tools that impact their daily practice. This exclusion leads to misaligned outcomes, incomplete evaluations, and increased burdens for nurses at the bedside. Dr. Wieben will share experiences and insights from three examples of ongoing work: (1) embedding a direct-care nurse in the research team for a pragmatic trial of ambient listening technology for nursing, (2) co-designing a generative AI evaluation framework with direct-care nurses, and (3) developing microlearning modules to build AI literacy. This presentation will conclude with a call to action: for AI to truly support nursing, direct care nurses must be at the center of design, evaluation, and literacy efforts — not just as participants, but as core contributors.</p>
+        </div>
+        <div class="speaker-bio">
+          <div class="speaker-talk-label">Bio</div>
+          <p>Ann Wieben, PhD, RN, is an Assistant Professor at the University of Wisconsin–Madison School of Nursing. With over a decade of experience in nursing informatics spanning both clinical and academic environments, Dr. Wieben's research centers on the responsible integration of artificial intelligence (AI) technologies into nursing practice. Employing both qualitative and quantitative methods, Dr. Wieben investigates how AI can be ethically and effectively embedded in clinical workflows to support direct care nurses. Dr. Wieben holds leadership roles with the Nursing Knowledge Big Data Science Initiative and the Big Ten Academic Alliance Nursing Informatics Workgroup. Recognized for contributions to the field, Dr. Wieben was named an Emerging Leader by the Alliance for Nursing Informatics in 2024 and inducted as a Fellow of the American Medical Informatics Association in 2026.</p>
+        </div>
       </div>
-      <h3>Keynote Speakers Coming Soon</h3>
-      <p>Speaker names, bios, presentation titles, and talk abstracts will be announced here. Check back for updates or <a href="/cdn-cgi/l/email-protection#c8a9a1a6bdbabbad88a6a9a1a4aba7a4a4a9aae6a7baaf" style="color:var(--teal);">contact us</a> to be notified.</p>
+
+      <!-- Invited Speaker 1 TBD -->
+      <div class="speaker-card speaker-card-tbd">
+        <div class="speaker-header">
+          <div class="speaker-avatar" style="background:var(--gray-100);color:var(--gray-500);">TBD</div>
+          <div>
+            <h3 class="speaker-name" style="color:var(--gray-500);">Invited Speaker</h3>
+            <div class="speaker-creds" style="color:var(--gray-300);">To be announced</div>
+            <div class="speaker-slot">Invited Address &nbsp;·&nbsp; 9:15 – 10:00 am</div>
+          </div>
+        </div>
+        <div class="speaker-talk">
+          <div class="speaker-talk-label">Presentation Title</div>
+          <div class="speaker-talk-title" style="color:var(--gray-500);">Title to be announced <span class="tbd">TBD</span></div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
