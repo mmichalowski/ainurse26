@@ -577,6 +577,22 @@
     vertical-align: middle;
   }
 
+  /* Recorded pill */
+  .recorded {
+    display: inline-block;
+    background: rgba(45,181,160,0.15);
+    color: var(--mint);
+    border: 1px solid rgba(45,181,160,0.35);
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+
 
   /* SUBMISSION CONTENT */
   .sub-content-block {
@@ -1020,19 +1036,26 @@
       <div class="format-item">
         <div class="format-number">02</div>
         <div>
-          <h3>Invited Speaker / Panel</h3>
-          <p>An invited speaker or expert panel addressing trustworthy AI implementation in real-world clinical settings.</p>
+          <h3>NI Bi-Weekly Session: Live Building</h3>
+          <p>A hands-on opening session: a framing talk from Maxim Topaz followed by a live, in-room build of the NAIL Digest — a community-curated, AI-assisted literature digest for nursing informatics.</p>
         </div>
       </div>
       <div class="format-item">
         <div class="format-number">03</div>
         <div>
-          <h3>Structured Panel Discussion</h3>
-          <p><em>"Implementing Trustworthy AI in Nursing: From Research to Practice"</em> — a focused panel engaging participants in active debate.</p>
+          <h3>Invited Emerging Scholar Presentation</h3>
+          <p>Ann Wieben, PhD, RN (University of Wisconsin–Madison) presents <em>"AI for Nurses, by Nurses: Centering the Direct Care Nurse Voice in AI Research, Evaluation, and Literacy."</em></p>
         </div>
       </div>
       <div class="format-item">
         <div class="format-number">04</div>
+        <div>
+          <h3>Invited Research Exploration</h3>
+          <p>Lisiane Pruinelli presents <em>"Clinician-Informed, Data-Enabled Decision-Making in Transplantation,"</em> examining how data can support clinical judgment in transplant care.</p>
+        </div>
+      </div>
+      <div class="format-item">
+        <div class="format-number">05</div>
         <div>
           <h3>Facilitated Closing Discussion</h3>
           <p>A structured session to identify shared challenges and collaboratively define future research directions in AI and nursing.</p>
@@ -1059,10 +1082,18 @@
         <div class="sched-content"><span class="sched-title">Opening Remarks</span><span class="sched-auth">Martin Michalowski &amp; Lisiane Pruinelli</span></div>
       </div>
 
-      <!-- Invited Speaker 1 -->
-      <div class="sched-row sched-keynote">
+      <!-- NI Bi-Weekly Session -->
+      <div class="sched-row sched-session-hdr">
         <div class="sched-time">9:15 – 10:00</div>
-        <div class="sched-content"><span class="sched-session-label">Invited Address</span><span class="sched-title">Invited Speaker 1 <span class="tbd">TBD</span></span></div>
+        <div class="sched-content"><span class="sched-session-label">NI Bi-Weekly Session</span><span class="sched-auth">Live, interactive session &nbsp;·&nbsp; Session Chair: Martin Michalowski</span></div>
+      </div>
+      <div class="sched-row sched-paper">
+        <div class="sched-time">9:15</div>
+        <div class="sched-content"><span class="sched-title">The Problem of Keeping Up — and Why the Community Should Own the Solution</span><span class="sched-auth">Maxim Topaz (remote)</span></div>
+      </div>
+      <div class="sched-row sched-paper">
+        <div class="sched-time">9:25</div>
+        <div class="sched-content"><span class="sched-title">Live Building of the NAIL Digest: AI-Driven Nursing Informatics</span><span class="sched-auth">Martin Michalowski &amp; workshop participants</span></div>
       </div>
 
       <!-- Break -->
@@ -1124,7 +1155,7 @@
       </div>
       <div class="sched-row sched-paper">
         <div class="sched-time">2:45</div>
-        <div class="sched-content"><span class="sched-title">Preparing Future Nurse Scientists: Bridging Traditional Statistics and AI Literacy in PhD Nursing Education</span><span class="sched-auth">Stefanie L. Boyles, Julienne N. Rutherford, Erin Galyen</span></div>
+        <div class="sched-content"><span class="sched-title">Preparing Future Nurse Scientists: Bridging Traditional Statistics and AI Literacy in PhD Nursing Education <span class="recorded">Recorded</span></span><span class="sched-auth">Stefanie L. Boyles, Julienne N. Rutherford, Erin Galyen</span></div>
       </div>
 
       <!-- Break -->
@@ -1133,19 +1164,19 @@
         <div class="sched-content"><span class="sched-title">Coffee Break</span></div>
       </div>
 
-      <!-- Panel -->
+      <!-- Invited Research Exploration -->
       <div class="sched-row sched-keynote">
-        <div class="sched-time">3:20 – 4:10</div>
+        <div class="sched-time">3:20 – 3:50</div>
         <div class="sched-content">
-          <span class="sched-session-label">Panel Discussion</span>
-          <span class="sched-title">Prioritizing Nurse–Patient Relationships in the Digital Transformation of Nursing: From Discussion Paper to Practice</span>
-          <span class="sched-auth">Moderated by Michal Lipschuetz (Hadassah–Hebrew University) &amp; Maxim Topaz (Columbia University)</span>
+          <span class="sched-session-label">Invited Research Exploration</span>
+          <span class="sched-title">Clinician-Informed, Data-Enabled Decision-Making in Transplantation</span>
+          <span class="sched-auth">Lisiane Pruinelli</span>
         </div>
       </div>
 
       <!-- Closing -->
       <div class="sched-row sched-special">
-        <div class="sched-time">4:10 – 4:30</div>
+        <div class="sched-time">3:50 – 4:10</div>
         <div class="sched-content"><span class="sched-title">Closing Remarks &amp; Discussion</span><span class="sched-auth">Martin Michalowski &amp; Lisiane Pruinelli</span></div>
       </div>
 
@@ -1188,21 +1219,7 @@
         </div>
       </div>
 
-      <!-- Invited Speaker 1 TBD -->
-      <div class="speaker-card speaker-card-tbd">
-        <div class="speaker-header">
-          <div class="speaker-avatar" style="background:var(--gray-100);color:var(--gray-500);">TBD</div>
-          <div>
-            <h3 class="speaker-name" style="color:var(--gray-500);">Invited Speaker</h3>
-            <div class="speaker-creds" style="color:var(--gray-300);">To be announced</div>
-            <div class="speaker-slot">Invited Address &nbsp;·&nbsp; 9:15 – 10:00 am</div>
-          </div>
-        </div>
-        <div class="speaker-talk">
-          <div class="speaker-talk-label">Presentation Title</div>
-          <div class="speaker-talk-title" style="color:var(--gray-500);">Title to be announced <span class="tbd">TBD</span></div>
-        </div>
-      </div>
+      <!-- Invited Speaker 1 TBD removed — 9:15 slot now filled by the NI Bi-Weekly Session, see Workshop Schedule -->
 
     </div>
   </div>
